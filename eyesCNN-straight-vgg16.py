@@ -26,14 +26,14 @@ from keras.optimizers import SGD
 
 
 
-images_path1="E:/Thesiscodes/drowsinessdetectiondeep/close-straight/1-1/"
-images_path2="E:/Thesiscodes/drowsinessdetectiondeep/Open-straight/1-2/"
-images_path3="E:/Thesiscodes/drowsinessdetectiondeep/close-straight/2-1/"
-images_path4="E:/Thesiscodes/drowsinessdetectiondeep/Open-straight/2-2/"
-images_path5="E:/Thesiscodes/drowsinessdetectiondeep/close-straight/3-1/"
-images_path6="E:/Thesiscodes/drowsinessdetectiondeep/Open-straight/3-2/"
-images_path7="E:/Thesiscodes/drowsinessdetectiondeep/close-straight/4-1/"
-images_path8="E:/Thesiscodes/drowsinessdetectiondeep/Open-straight/4-2/"
+images_path1="E:/../close-straight/1-1/"
+images_path2="E:/.../Open-straight/1-2/"
+images_path3="E:/.../close-straight/2-1/"
+images_path4="E:/.../Open-straight/2-2/"
+images_path5="../close-straight/3-1/"
+images_path6="E:/.../Open-straight/3-2/"
+images_path7="E:/.../close-straight/4-1/"
+images_path8="E:/.../Open-straight/4-2/"
 images1=glob.glob(images_path1+"*.jpg")
 images2=glob.glob(images_path2+"*.jpg")
 images3=glob.glob(images_path3+"*.jpg")
@@ -144,7 +144,7 @@ train = X_train/X_train.max()      # centering the data
 X_valid = X_valid/X_train.max()
 
 
-
+#adding extra layers to our transfer learning model
 model = Sequential()
 model.add(InputLayer((7*7*512,)))    # input layer
 model.add(Dense(units=1024, activation='relu')) # hidden layer
